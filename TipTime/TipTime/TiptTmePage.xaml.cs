@@ -18,7 +18,23 @@ public partial class TiptTmePage : ContentPage
 
     private void arredDown_Clicked(object sender, EventArgs e)
     {
-        tipsPerSlider.Value = tipsPerSlider.Value - 1;
+        //arredondar o numero para o inteiro menor ao valor
+        // pegar o valor da refeicao
+        // pegar a procentagem que o user selecionou
+        //calcuar o valor da gorjeta
+        //arredondar
+        //calcular o total
+        //exibir
+
+        double valorDaRefeição = Convert.ToDouble(insertVal.Text);
+        double valorDoSlider = tipsPerSlider.Value;
+        double valorDaGorjeta = valorDaRefeição * (valorDoSlider / 100);
+        valorDaGorjeta = Math.Floor(valorDaGorjeta);// floor e celing arredondam//
+        double totalRefeicao = valorDaGorjeta + valorDaRefeição;
+
+        totalValue.Text = totalRefeicao.ToString();
+        tipsValue.Text = valorDaGorjeta.ToString();
+
     }
 
 
