@@ -2,47 +2,99 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TipTime.TiptTmePage"
-             Title="TiptTmePage">
+             Title="Tip Calculator">
     <VerticalStackLayout>
+        
+        
         <Label 
-            Text="TIP TIME!"
+            Text="Bill"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
-        <Editor
-            X:Name="inserirValor"
-            Placeholder="Digite o Valor da Compra: "
+        <Entry
+            x:Name="insertVal"
+            Placeholder="Enter Amount: "
             />
 
         <Label
-            X:Name="gorj"
-            Text="Gorjeta:"
-                       
+            Text="Tip:"
+            Margin="0,10,0,0"
+            FontFamily="Times New Romam"
+            />
+        <Label
+            x:Name="tipsValue"
+            Text="0.00"
+            Margin="0,0,0,10"
             />
 
-        <label
-            X:Name="total"
+
+        <Label
             Text="Total:"
+            Margin="0,10,0,0"
             />
+        
+        <Label
+            x:Name="totalValue"
+            Text="0.00"
+            Margin="0,0,0,10"
+            />
+
+
+
+        <Label
+            x:Name="tipPer"
+            Text="Tip Percentage"
+            />
+
+        <Label
+            x:Name="sliderPer"
+            Text="0%"
+            Margin="0,0,0,10"
+      
+            />
+
+        <Slider
+            x:Name = "tipsPerSlider"
+            Minimum="0"
+            Maximum="50"
+            Value="15"
+            ValueChanged="tipsPerSlider_ValueChanged"
+            />
+
+
+
 
         <Button
+            
+            x:Name="Percentage15Button"
             Text="15%"
-            Clicked="15Cliked"
+            BackgroundColor="DarkRed"
+            Clicked="Percentage15Button_Clicked"
+            Margin="0,25,0,0"
+            Padding="0,0,0,0"
          />
 
         <Button
+            x:Name="Percentage30Button"
             Text="30%" 
-            Clicked="30Cliked"
+            Clicked="Percentage30Button_Clicked"
+            Margin="0,25,0,0"
             />
 
         <Button
-            Text="Arredondar para Cima"
-            Clicked="arredondarCimaClicked"
+            x:Name="arredDown"
+            Text="Round Down"
+            Clicked="arredDown_Clicked"
+            Margin="0,25,0,0"
             />
 
+        
+      
         <Button
-            Text="Arredondar para Baixo"
-            Clicked="arredondarBaixoClicked"
+            x:Name="arredUp"
+            Text="Round Up"
+            Clicked="arredUp_Clicked"
+            Margin="0,25,0,0"
             />
 
 
