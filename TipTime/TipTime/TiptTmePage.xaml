@@ -10,38 +10,39 @@
             HorizontalOptions="Center" />
 
         <Editor
-            x:Name="inserirValor"
+            X:Name="inserirValor"
             Placeholder="Digite o Valor da Compra: "
             />
 
         <Label
-            x:name="gorj"
-                               
+            X:Name="gorj"
+            Text="Gorjeta:"
+                       
             />
 
-        <Label
-            x:name="total"
-   
+        <label
+            X:Name="total"
+            Text="Total:"
             />
 
         <Button
-            
-            clicked="15Clicked"
+            Text="15%"
+            Clicked="15Cliked"
          />
 
         <Button
-         
-            clicked="30Cliked"
+            Text="30%" 
+            Clicked="30Cliked"
             />
 
         <Button
-            
-            clicked="arredondarCimaClicked"
+            Text="Arredondar para Cima"
+            Clicked="arredondarCimaClicked"
             />
 
         <Button
-           
-            clicked="arredondarBaixoClicked"
+            Text="Arredondar para Baixo"
+            Clicked="arredondarBaixoClicked"
             />
 
 
