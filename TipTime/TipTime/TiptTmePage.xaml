@@ -5,8 +5,47 @@
              Title="TiptTmePage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="TIP TIME!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <Editor
+            x:Name="inserirValor"
+            Placeholder="Digite o Valor da Compra: "
+            />
+
+        <Label
+            x:name="gorj"
+                               
+            />
+
+        <Label
+            x:name="total"
+   
+            />
+
+        <Button
+            
+            clicked="15Clicked"
+         />
+
+        <Button
+         
+            clicked="30Cliked"
+            />
+
+        <Button
+            
+            clicked="arredondarCimaClicked"
+            />
+
+        <Button
+           
+            clicked="arredondarBaixoClicked"
+            />
+
+
+
+
     </VerticalStackLayout>
 </ContentPage>
