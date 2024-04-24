@@ -34,12 +34,21 @@ public partial class TiptTmePage : ContentPage
 
         totalValue.Text = totalRefeicao.ToString();
         tipsValue.Text = valorDaGorjeta.ToString();
+        tipsPerSlider.Value = tipsPerSlider.Value + 1;
 
     }
 
 
     private void arredUp_Clicked(object sender, EventArgs e)
     {
+        double valorDaRefeição = Convert.ToDouble(insertVal.Text);
+        double valorDoSlider = tipsPerSlider.Value;
+        double valorDaGorjeta = valorDaRefeição * (valorDoSlider / 100);
+        valorDaGorjeta = Math.Floor(valorDaGorjeta);// floor e celing arredondam//
+        double totalRefeicao = valorDaGorjeta + valorDaRefeição;
+
+        totalValue.Text = totalRefeicao.ToString();
+        tipsValue.Text = valorDaGorjeta.ToString();
         tipsPerSlider.Value = tipsPerSlider.Value + 1;
     }
 
