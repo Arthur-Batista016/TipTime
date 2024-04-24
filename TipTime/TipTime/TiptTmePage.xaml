@@ -68,7 +68,6 @@
             
             x:Name="Percentage15Button"
             Text="15%"
-            BackgroundColor="DarkRed"
             Clicked="Percentage15Button_Clicked"
             Margin="0,25,0,0"
             Padding="0,0,0,0"
